@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Row</title>
+    <style>
+      body {
+        margin: 0; /* This removes spacing around the edge of the page*/
+      }
+      /* Makes images rely on parent container for sizing */
+      img {
+        width: 100%;
+        height: auto;
+      }
+      div {
+        border: 1px dotted gray;
+      }
+      main {
+        width: 800px;
+        margin: 0 auto;
+      }
+      .row {
+        display: flex;
+        border: 2px solid black;
+        background-color: #E98542;
+        /* This uses nested selectors to ensure styling is only applied to elements within .row */
+        .image-holder {
+          width: calc(30% - 4px);
+        }
+        .description {
+          padding: 10px;
+          width: calc(70% - 24px); /* 70% - padding and border on both sides */
+        }
+      }
+      .alternate {
+        flex-direction: row-reverse; /* reverses order */
+        background-color: #3F5635;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="column">
+    
+        <div class="row">
+          <div class="image-holder">
+            <img src="https://placehold.co/320x240" alt="placeholder" />
+          </div>
+          <div class="description">
+            <h3>Raystown Lake</h3>
+            <p>
+                A scenic reservoir near Huntingdon, offering boating, fishing, hiking, and camping amid picturesque landscapes and water activities.
+            </p>
+          </div>
+        </div>
+        
+        <div class="row alternate">
+          <div class="image-holder">
+            <img src="https://placehold.co/320x240" alt="placeholder" />
+          </div>
+          <div class="description">
+            <h3>Lewisburg</h3>
+            <p>
+                A charming small town known for its historic downtown, offering boutique shops, galleries, and restaurants, as well as attractions like the Lewisburg Farmers Market and Packwood House Museum.
+            </p>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="image-holder">
+            <img src="https://placehold.co/320x240" alt="placeholder" />
+          </div>
+          <div class="description">
+            <h3>Worlds End State Park</h3>
+            <p>
+                Situated in the Endless Mountains, this park is known for its rugged beauty, with hiking trails, waterfalls, and breathtaking views of the Loyalsock Creek Gorge.
+            </p>
+          </div>
+        </div>
+     
+        <div class="row alternate">
+          <div class="image-holder">
+            <img src="https://placehold.co/320x240" alt="placeholder" />
+          </div>
+          <div class="description">
+            <h3>Pennsylvania Grand Canyon</h3>
+            <p>
+                Also known as Pine Creek Gorge, this natural wonder features stunning vistas, hiking trails, and opportunities for outdoor recreation.
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="image-holder">
+            <img src="https://placehold.co/320x240" alt="placeholder" />
+          </div>
+          <div class="description">
+            <h3>Pine Grove Furnace State Park</h3>
+            <p>
+                Serving as the "Gateway to the Appalachian Trail," this park offers hiking, picnicking, and swimming opportunities, along with historic features and natural beauty
+            </p>
+          </div>
+        </div>
+     
+        <div class="row alternate">
+          <div class="image-holder">
+            <img src="https://placehold.co/320x240" alt="placeholder" />
+          </div>
+          <div class="description">
+            <h3>Central Market York</h3>
+            <p>
+                The oldest continuously operating farmers' market in the U.S., offering a bustling atmosphere, local produce, crafts, and diverse food vendors.
+            </p>
+          </div>
+        </div>
+        
+      </div>
+    </main>
+  </body>
+</html>
