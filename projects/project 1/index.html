@@ -6,47 +6,69 @@
     <title>Card Row</title>
     <style>
       body {
-        margin: 0; /* This removes spacing around the edge of the page*/
+        margin: 0;
       }
-      /* Makes images rely on parent container for sizing */
       img {
         width: 100%;
         height: auto;
       }
-      div {
-        border: 1px dotted gray;
-      }
       main {
-        width: 800px;
+        width: 1700px;
         margin: 0 auto;
+      }
+      #background {
+        background-color: #F6E6D8;
+        height: 2800px;
+        position: absolute;
+      }
+      #header {
+        color:#3F5635;
+      }
+      #footer {
+       background-color: #3F5635;
+       color: #A1B28A;
+       height: 70px;
+      }
+      #subheader {
+        color:#E98542;
       }
       .row {
         display: flex;
-        border: 2px solid black;
         background-color: #E98542;
-        /* This uses nested selectors to ensure styling is only applied to elements within .row */
+        color: white;
         .image-holder {
+          padding: 20px;
           width: calc(30% - 4px);
         }
         .description {
           padding: 10px;
-          width: calc(70% - 24px); /* 70% - padding and border on both sides */
+          width: calc(70% - 24px); 
         }
       }
       .alternate {
-        flex-direction: row-reverse; /* reverses order */
+        flex-direction: row-reverse; 
         background-color: #3F5635;
         color: white;
       }
     </style>
   </head>
+  <div id="background">
+  </div>
+  <div id="header">
+    <h1>PA TOURISM</h1>
+  </div>
+  <div>
+    <img src="https://placehold.co/1700x530" alt="placeholder" />
+  </div>
+  <div id="subheader">
+    <h1>POPULAR PLACES</h1>
+  </div>
   <body>
     <main>
       <div class="column">
-    
         <div class="row">
           <div class="image-holder">
-            <img src="https://placehold.co/320x240" alt="placeholder" />
+            <img src="https://placehold.co/800x450" alt="placeholder" />
           </div>
           <div class="description">
             <h3>Raystown Lake</h3>
@@ -58,7 +80,7 @@
         
         <div class="row alternate">
           <div class="image-holder">
-            <img src="https://placehold.co/320x240" alt="placeholder" />
+            <img src="https://placehold.co/800x450" alt="placeholder" />
           </div>
           <div class="description">
             <h3>Lewisburg</h3>
@@ -70,7 +92,7 @@
       
         <div class="row">
           <div class="image-holder">
-            <img src="https://placehold.co/320x240" alt="placeholder" />
+            <img src="https://placehold.co/800x450" alt="placeholder" />
           </div>
           <div class="description">
             <h3>Worlds End State Park</h3>
@@ -82,7 +104,7 @@
      
         <div class="row alternate">
           <div class="image-holder">
-            <img src="https://placehold.co/320x240" alt="placeholder" />
+            <img src="https://placehold.co/800x450" alt="placeholder" />
           </div>
           <div class="description">
             <h3>Pennsylvania Grand Canyon</h3>
@@ -94,7 +116,7 @@
 
         <div class="row">
           <div class="image-holder">
-            <img src="https://placehold.co/320x240" alt="placeholder" />
+            <img src="https://placehold.co/800x450" alt="placeholder" />
           </div>
           <div class="description">
             <h3>Pine Grove Furnace State Park</h3>
@@ -106,7 +128,7 @@
      
         <div class="row alternate">
           <div class="image-holder">
-            <img src="https://placehold.co/320x240" alt="placeholder" />
+            <img src="https://placehold.co/800x450" alt="placeholder" />
           </div>
           <div class="description">
             <h3>Central Market York</h3>
@@ -115,7 +137,9 @@
             </p>
           </div>
         </div>
-        
+        <div id="footer">
+          <h2>THANKS FOR VISITING</h2>
+        </div>
       </div>
     </main>
   </body>
