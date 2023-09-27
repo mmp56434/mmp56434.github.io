@@ -13,23 +13,27 @@
         margin: 0 auto;
       }
       #background {
-        background-color: #F6E6D8;
-        height: 2800px;
+        height: 2750px;
         position: absolute;
       }
       #header {
         color:#3F5635;
         text-align: center;
+        font-size: 25px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       }
       #subheader {
         color:#E98542;
         text-align: center;
+        font-size: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       } 
       #footer {
-       background-color: #3F5635;
-       color: #A1B28A;
-       height: 70px;
-       text-align: center;
+        font-size: 25px;
+        background-color: #3F5635;
+        color: #A1B28A;
+        height: 70px;
+        text-align: center;
       }
       .row {
         display: flex;
@@ -45,12 +49,12 @@
         color: white;
       }
       .button {
-       background-color: #F1A265;
-       color: white;
-       padding: 10px 15px;
-       text-align: center;
-       border: 2px solid white;
-       text-decoration: none;
+        background-color: #F1A265;
+        color: white;
+        padding: 10px 15px;
+        text-align: center;
+        border: 2px solid white;
+        text-decoration: none;
       }
       .opposite {
         background-color: #A1B28A;
@@ -61,16 +65,20 @@
         text-decoration: none;
       }
       .description {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 554px;
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 554px;
       }
       .description > div {
       width: 70%;
       }
       .description h3 {
       margin-top: 0;
+      }
+      #calltoaction {
+        padding: 15px;
       }
     </style>
   </head>
@@ -80,7 +88,7 @@
     <h1>PA TOURISM</h1>
   </div>
   <div>
-    <img src="images/CallToAction.png" alt="This is a picture of the elderly traveling!">
+    <img id="calltoaction" src="images/calltoaction.jpg" alt="This is a picture of the elderly traveling!">
   </div>
 
 
@@ -101,7 +109,7 @@
             <p>
                 A scenic reservoir near Huntingdon, offering boating, fishing, hiking, and camping amid picturesque landscapes and water activities.
             </p> 
-            <a class="button" href="#">Visit Website</a>
+            <a class="button" href="#"><strong>Visit Website</strong></a>
             </div>
           </div>
         </div>
@@ -132,7 +140,7 @@
             <p>
                 Situated in the Endless Mountains, this park is known for its rugged beauty, with hiking trails, waterfalls, and breathtaking views of the Loyalsock Creek Gorge.
             </p>
-            <a class="button" href="#">Visit Website</a>
+            <a class="button" href="#"><strong>Visit Website</strong></a>
               </div>
               </div>
           </div>
@@ -148,7 +156,7 @@
             <p>
                 Also known as Pine Creek Gorge, this natural wonder features stunning vistas, hiking trails, and opportunities for outdoor recreation.
             </p>
-            <a class="opposite" href="#">Visit Website</a>
+            <a class="opposite" href="#"><strong>Visit Website</strong></a>
               </div>
               </div>
           </div>
@@ -164,7 +172,7 @@
             <p>
                 Serving as the "Gateway to the Appalachian Trail," this park offers hiking, picnicking, and swimming opportunities, along with historic features and natural beauty
             </p>
-            <a class="button" href="#">Visit Website</a>
+            <a class="button" href="#"><strong>Visit Website</strong></a>
               </div>
               </div>
           </div>
@@ -181,7 +189,7 @@
             <p>
                 The oldest continuously operating farmers' market in the U.S., offering a bustling atmosphere, local produce, crafts, and diverse food vendors.
             </p>
-            <a class="opposite" href="#">Visit Website</a>
+            <a class="opposite" href="#"><strong>Visit Website</strong></a>
               </div>
               </div>
           </div>
@@ -189,7 +197,7 @@
 
 
         <div id="footer">
-          <h2>THANKS FOR VISITING</h2>
+          <h2>THANKS FOR VISITING!</h2>
         </div>
       </div>
     </main>
