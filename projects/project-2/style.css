@@ -87,10 +87,12 @@
       font-size: 50px;
       font-family: Koulen;
       font-weight: 400;
+      width: fit-content;
+      padding-left: 20px;
+      padding-right: 20px;
       text-decoration: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      margin-top: 300px;
+      margin-left: 600px;
     }
     #ingredientlist {
       display: flex;
