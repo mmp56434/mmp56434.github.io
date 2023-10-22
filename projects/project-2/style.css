@@ -47,6 +47,8 @@
   }
   .row {
     display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0 auto;
   }
     #intro {
@@ -54,8 +56,7 @@
       color: #D65B42;
       font-size: 90px;
       font-family: Koulen;
-      line-height: 130px;
-      margin-left: 90px;
+      line-height: 100px;
     }
     .button {
       font-family: Titillium Web;
@@ -66,18 +67,19 @@
       text-decoration: none;
       display: flex;
       flex-direction: column;
-      margin: 25px;
-      margin-left: 200px;
       margin-top: -20px;
+      margin-bottom: 40px;
+      margin-left: 175px;
     }
     a:hover {
       background-color: #D65B42;
       color: #F1EBE5;
     }
     #recipe {
-      padding-left: 275px;
-      padding-top: 50px;
-      padding-bottom: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
     }
     #downloadbutton {
       background-color: #51674B;
@@ -86,9 +88,9 @@
       font-family: Koulen;
       font-weight: 400;
       text-decoration: none;
-      padding-left: 20px;
-      padding-right: 20px;
-      margin-left: 750px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     #ingredientlist {
       display: flex;
