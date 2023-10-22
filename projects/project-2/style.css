@@ -60,13 +60,14 @@
     .button {
       font-family: Titillium Web;
       font-size: 50px;
+      width: 700px;
       background-color: #51674B;
       color: white;
       text-decoration: none;
       display: flex;
       flex-direction: column;
       margin: 25px;
-      margin-left: 50px;
+      margin-left: 200px;
       margin-top: -20px;
     }
     a:hover {
@@ -98,7 +99,7 @@
       font-size: 30px;
       font-family: Titillium Web;
       font-weight: 400;
-      margin-left: 30px;
+      margin-left: 50px;
     }
     #whatyouneed {
       color: #D65B42;
@@ -107,7 +108,7 @@
       font-weight: 400;
       margin-top: -100px;
       margin-bottom: -100px;
-      margin-left: 30px;
+      margin-left: 50px;
     }
     #sauce {
       color: black;
@@ -116,7 +117,7 @@
       font-weight: 400;
       margin-top: -20px;
       margin-bottom: -20px;
-      margin-left: 30px;
+      margin-left: 50px;
     }
     #make-it-now-button {
       background-color: #51674B;
@@ -126,9 +127,15 @@
       font-weight: 400;
       width: fit-content;
       padding: 0px 20px 0px 20px;
-      margin-left: 400px;
+      margin-left: 450px;
       text-decoration: none;
       display: flex;
+    }
+    .step-row {
+      display: flex;
+      list-style-type: none;
+      justify-content: space-evenly;
+      text-align: center;
     }
     #selected {
       background-color: #D65B42;
@@ -138,9 +145,10 @@
       font-weight: 400;
       width: 128px;
       height: 73px;
-      padding-left: 30px;
+      padding-left: 20px;
       padding-right: 20px;
-      margin-right: 40px;
+      margin-right: 30px;
+      text-decoration: none;
     }
     .steps {
       background-color: #51674B;
@@ -150,14 +158,16 @@
       font-weight: 400;
       width: 112px;
       height: 55px;
-      padding-left: 30px;
+      padding-left: 20px;
       padding-right: 20px;
       margin-right: 30px;
       text-decoration: none;
     }
     #step-image {
-      margin-top: 50px;
+      margin-top: 10px;
       margin-left: 300px;
+      margin-bottom: 10px;
+      border: #51674B solid 9px;
       display: flex;
     }
     #step-title {
@@ -182,6 +192,6 @@
       font-size: 70px;
       font-family: Koulen;
       font-weight: 400;
-      margin-top: 350px;
+      margin-top: 250px;
       margin-left: 250px;
     }
