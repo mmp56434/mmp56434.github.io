@@ -21,7 +21,7 @@
       }
       /* Draw border so we can see elements */
       figure,
-      div {
+      div .row{
         border: 1px solid gray;
       }
       body {
@@ -36,26 +36,44 @@
       header {
         padding: var(--padding-small);
         background-color: var(--base-gray);
+      }
         #logo {
           width: var(--header-width);
-          h1 {
-            margin: 0;
-          }
+          height: 100%;
         }
-        nav {
-          text-align: right;
-          width: calc(100% - var(--header-width));
-
-          ul {
-            margin: 0;
-          }
-          li {
-            display: inline;
-          }
-          a {
-            padding: var(--padding-medium);
-          }
+        h1 {
+          margin: 0;
+          padding-top: 15px;
         }
+        .header-row nav {
+          float: right;
+        }
+      #primary-nav ul {
+        margin: 0;
+        padding: 0;
+      }
+      #primary-nav li {
+        list-style: none;
+        display: inline-block;
+        border: 1px solid black;
+      }
+      #primary-nav li a {
+        border: 1px solid black;
+        color: #fff;
+        background-color: #4e6876;
+        padding: 20px;
+        display: block;
+        text-decoration: none;
+      }
+      #primary-nav li a:hover {
+        background-color:  white;
+        color: #4e6876;
+      }
+      #toggle-nav {
+        display: none;
+        position: absolute;
+        right: 1em;
+        top: 1em;
       }
       main {
         max-width: 1200px;
@@ -83,6 +101,12 @@
       figure.card {
         margin: 0;
       }
+      .header-row {
+        display: flex;
+        margin: 0 auto;
+        max-width: 1100px;
+        gap: var(--gap);
+      }
       /* Utilities */
       .row {
         display: flex;
@@ -92,13 +116,35 @@
         justify-content: space;
       }
       @media (max-width: 720px) {
+         body.nav-open #primary-nav {
+          grid-template-rows: 1fr;
+        }
+        .header-row {
+        flex-direction: column;
+      }
+        #primary-nav {
+          display: grid;
+          grid-template-rows: 0fr;
+          transition: grid-template-rows 0.5s ease-out;
+        }
+        #primary-nav li {
+          display: block;
+        }
+        #toggle-nav {
+          display: block;
+          background-color: gray;
+        }
+        .inner {
+          overflow: hidden;
+          text-align: right;
+        }
         .row { 
             flex-direction: column;
             display: block;
             width: fit-content;
         }
         #logo {
-          text-align: center;
+          width: 100%;
         }
         #hero-image {
           width: fit-content;
@@ -107,20 +153,24 @@
           width: fit-content;
           padding: 10px;
         }
+        
       }
     </style>
   </head>
   <body>
+  <button id="toggle-nav">&#9776;</button>
     <!-- Header -->
     <header>
-      <div class="row">
+      <div class="header-row">
         <div id="logo"><h1>Learning Poker</h1></div>
-        <nav>
-          <ul>
-            <li><a href="/exercises/exercise-5/index.html">Home</a></li>
-            <li><a href="../exercise-5/how-to-play-texas-holdem/index.html">Texas Hold'Em</a></li>
-            <li><a href="../exercise-5/popular-poker-variants/index.html"> Popular Poker Variants</a></li>
-          </ul>
+        <nav id="primary-nav" role="navigation">
+          <div class="inner">  
+            <ul>
+              <li><a href="/exercises/exercise-5/index.html">Home</a></li>
+              <li><a href="../exercise-5/how-to-play-texas-holdem/index.html">Texas Hold'Em</a></li>
+              <li><a href="../exercise-5/popular-poker-variants/index.html"> Popular Poker Variants</a></li>
+            </ul>
+          </div>
         </nav>
       </div>
     </header>
@@ -159,5 +209,22 @@
         </figure>
       </div>
     </main>
+    <script>
+      // Perform this after the window has loaded
+      window.onload = () => {
+        // First, tell JavaScript to remember which DOM element (in this case, a button) to reference (by id)
+        const toggleNav = document.getElementById('toggle-nav');
+        toggleNav.innerHTML = '&#9776;';
+
+        // Tell button to do something on click
+        toggleNav.addEventListener('click', () => {
+          // toggle the body's class attribute
+          document.body.classList.toggle('nav-open');
+          toggleNav.innerHTML = document.body.classList.contains('nav-open')
+            ? '&#x2715'
+            : '&#9776;';
+        });
+      };
+    </script>
   </body>
 </html>
