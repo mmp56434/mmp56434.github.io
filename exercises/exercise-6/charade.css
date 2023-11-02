@@ -1,0 +1,15 @@
+header {
+    background-color: lightgrey;
+}
+body {
+    background-color: gray;
+}
+.container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.card-container {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
