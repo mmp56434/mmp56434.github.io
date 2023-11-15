@@ -4,70 +4,73 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Alice in Wonderland - Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
-    rel="stylesheet" 
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
-    crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alice&family=Cedarville+Cursive&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="alice.css">
   </head>
-  <header class="header-container">
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">Alice in Wonderland</a>
-          <button class="navbar-toggler" 
-          type="button" 
-          data-bs-toggle="collapse" 
-          data-bs-target="#navbarNav" 
-          aria-controls="navbarNav" 
-          aria-expanded="false" 
-          aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="synopsis/index.html">Synopsis</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="reviews/index.html">Reviews</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about-the-author/index.html">About the Author</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+<body class="nav-open">
+  <header>
+    <div id="title">
+      <a id="logo" href="index.html">Alice in Wonderland</a>
+    </div>
+    <button id="toggle-nav">☰</button>
+    <nav id="primary-nav" role="navigation">
+      <div class="inner">
+        <ul>
+          <li>
+            <a href="synopsis/index.html">Synopsis</a>
+          </li>
+          <li>
+            <a href="reviews/index.html">Reviews</a>
+          </li>
+          <li>
+            <a href="about-the-author/index.html">About the Author</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </header>
-  <body>
-    <main>
-        <div class="container">
-          <div id="hero-image">
-            <img src="../project-2/images/home-page.jpg" alt=""/>
+      <main>
+        <div id="content">
+          <div>
+            <img id="book" src="book-cover.jpeg" alt="Alice in Wonderland Book Cover">
           </div>
-          <div id="intro">
-            <h4>Slip and Fall,</h4>
-            <h4>Down the Rabbithole</h4>
-            <ul>
-                <li><strong>Author:</strong> Lewis Carroll</li>
-                <li><strong>Illustrator:</strong> John Tenniel</li>
-                <li><strong>Genre:</strong> Portal Fantasy</li>
-                <li><strong>Publisher:</strong> Macmillian</li>
-                <li><strong>Publish Date:</strong> November 1865</li>
-                <li><strong>Number of Pages:</strong> 352</li>
-            </ul>
-            <a class="learnmore-button" href="../project-2/step-1/index.html">LEARN MORE!</a>
+          <div id="text">
+            <h1>Slip and Fall,</h1>
+            <h1>Down the Rabbithole</h1>
+              <ul>
+                  <li><strong>Author:</strong> Lewis Carroll</li>
+                  <li><strong>Illustrator:</strong> John Tenniel</li>
+                  <li><strong>Genre:</strong> Portal Fantasy</li>
+                  <li><strong>Publisher:</strong> Macmillian</li>
+                  <li><strong>Publish Date:</strong> November 1865</li>
+                  <li><strong>Number of Pages:</strong> 352</li>
+              </ul>
+            <div class="container">
+              <div id="learnmore-button">
+              <a href="synopsis/index.html">LEARN MORE!</a>
+              </div>
+            </div>
           </div>
         </div>
-      </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
-    crossorigin="anonymous"></script>
-  </body>
+        </main>
+        <script>
+          // Perform this after the window has loaded
+          window.onload = () => {
+            // First, tell JavaScript to remember which DOM element (in this case, a button) to reference (by id)
+            const toggleNav = document.getElementById('toggle-nav');
+            toggleNav.innerHTML = '&#9776;';
+    
+            // Tell button to do something on click
+            toggleNav.addEventListener('click', () => {
+              // toggle the body's class attribute
+              document.body.classList.toggle('nav-open');
+              toggleNav.innerHTML = document.body.classList.contains('nav-open')
+                ? '&#x2715'
+                : '&#9776;';
+            });
+          };
+        </script>
+</body>
 </html>

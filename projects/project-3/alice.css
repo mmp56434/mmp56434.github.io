@@ -1,70 +1,342 @@
-.navbar {
-    background-color: #2C4B8B;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
 }
-.navbar a:link, .navbar a:visited {
-    color: #fff;
+:root {
+    --main-color-1: #2C4B8B;
+    --main-color-2: #9B86C3;
+    --main-color-3: #56437C;
+    --secondary-color: #E0E2F6;
+    --secondary-color-2: #D19A00;
+    --tertiary-color-1: white;
+    --teriary-color-2: black;
+    --padding-small: 1em;
+    --padding-medium: 2em;
+    --margin-small: 1em;
+    --margin-medium: 2em;
+    --gap: 1em;
 }
-.navbar a:hover {
-    text-decoration: underline;
-}
-.navbar-nav .nav-link.active, .navbar-nav .nav-link.show  {
-    text-decoration: double underline;
-    color: #D19A00;
-}
-    header .navbar-brand {
-        font-size: 30px;
-        font-family: Cedarville Cursive;
-        font-weight: 400;
-    }
-    header #navbarNav {
-        font-size: 20px;
-        font-family: Alice;
-        font-weight: 400;
-    }
-    .header-container {
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto;
-        width: 70%;
-        height: 100%;
-        background-color: #fff;
-    }
-main {
-    height: 800px;
-    background-color: #9B86C3;
-  }
-body {
-    height: 100%;
-}
-.container {
+header {
+    height: 100px;
+    width: 100%;
     display: flex;
+    background-color: var(--main-color-1);
     align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    width: 70%;
-    height: 100%;
-    background-color: #fff;
+    margin-bottom: 50px;
+
 }
-#intro h4 {
-    color: #56437C;
-    font-size: 45px;
+#logo {
+    font-size: 40px;
     font-family: Cedarville Cursive;
     font-weight: 400;
-    line-height: 50px;
+    padding: 0 10px 0 50px;
+    color: var(--tertiary-color-1);
 }
-#intro ul {
-    color: black;
-    font-size: 20px;
-    font-family: Alice;
-    font-weight: 400;
-    line-height: 43px;
+#toggle-nav {
+    display: none;
+    position: absolute;
+    right: 1em;
+    top: 1em;
 }
-.learnmore-button {
-    background-color: #56437C;
-    border-radius: 40px;
-    padding: 20px;
-    text-decoration: none;
+nav {
+    width: auto;
+    display: flex;
+    margin-left: auto;
+    margin-right: 50px;
+}
+nav ul {
+    display: flex;
+    justify-content: right;
+    align-items: right;
     font-size: 25px;
     font-family: Alice;
     font-weight: 400;
+}
+nav a {
+    padding-left: 40px;
+}
+nav li a {
+    color: var(--tertiary-color-1);
+} 
+nav li a:hover {
+    text-decoration: underline;
+  }
+  nav li a:active {
+    color: var(--secondary-color-2);
+  }
+body {
+    display: block;
+    background-color: var(--main-color-2)
+}
+#title {
+    display: flex;
+}
+main {
+    border-radius: 75px;
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 50px;
+    background-color: var(--secondary-color);
+}
+#content {
+    display: flex;
+}
+#book {
+    height: 600px;
+    margin-left: 25px;
+    border-radius: 75px;
+}
+#text {
+    padding-left: 20px;
+    margin: 25px;
+    margin-top: 100px;
+}
+h1 {
+    font-size: 50px;
+    font-family: Cedarville Cursive;
+    font-weight: 400;
+    line-height: 40px;
+    color: var(--main-color-3);
+    width: 480px;
+    max-width: 500px;
+    margin-top: 20px;
+}
+#text ul {
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: Alice;
+    font-weight: 400;
+    line-height: 30px;
+}
+#learnmore-button {
+    background-color: var(--main-color-3);
+    color: var(--secondary-color);
+    width: fit-content;
+    font-size: 30px;
+    font-family: Alice;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-radius: 40px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 115px;
+}
+#learnmore-button a {
+    color: var(--tertiary-color-1);
+}
+#learnmore-button:hover {
+    background-color: var(--main-color-1);
+    color: var(--tertiary-color-1);
+}
+.review-container {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    gap: 4em;
+}
+.review-box{
+    background-color: var(--tertiary-color);
+    padding: 1.8em;
+    height: auto;
+    min-width: 300px;
+    min-height: 1000px;
+    max-width: 575px;
+}
+.rating{
+    font-size: 25px;
+    padding-bottom: 10px;
+    color: var(--secondary-color-2)
+}
+.review-title{
+    font-family: Alice;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: left;  
+}
+.review-text{
+    font-family: Alice;
+    text-align: left;
+    line-height: 25px;
+
+}
+.reviewer-text{
+    font-family: Alice;
+    text-align: right;
+    line-height: 18px;
+}
+#title-review {
+    font-size: 50px;
+    font-family: Cedarville Cursive;
+    font-weight: 400;
+    line-height: 40px;
+    color: var(--main-color-3);
+    width: 480px;
+    max-width: 500px;
+}
+.portrait {
+    max-height: 420px; max-width: 280px;
+    margin-top: 50px;
+}
+.image {
+    position: relative;
+}
+.image figcaption{
+    position: absolute;
+    top: 25%;
+    bottom: 50%;
+    right: 50%;
+    font-size: 40px;
+}
+.float-left { 
+    float:left;
+    margin-right:20px;
+}
+.clear { 
+    clear:both;
+}
+.author-container p {
+    font-size: 21px;
+    font-family: Alice;
+    font-weight: 400;
+    line-height: 28px;
+    padding-top: 20px;
+}
+#author-text {
+    padding-top: 150px;
+}
+.author-container {
+    position: relative;
+}
+.author {
+    position: absolute;
+    color: var(--main-color-3);
+    font-size: 115px;
+    font-family: Cedarville Cursive;
+    font-weight: 400;
+    margin-left: 200px;
+}
+#synopsis {
+    display: flex;
+}
+#synopsis-book { 
+    height: 600px;
+    border-radius: 75px;
+}
+#synopsis p {
+    font-size: 21px;
+    font-family: Alice;
+    font-weight: 400;
+    line-height: 28px;
+    padding-top: 40px;
+    padding-right: 25px;
+}
+
+
+
+
+
+@media screen and (max-width: 980px) {
+    nav ul{
+        padding: 10px 5px;
+      }
+      nav li a {
+        color: var(--tertiary-color-3);
+        padding: 10px 10px;
+      }
+      nav li a:hover {
+        text-decoration: underline;
+      }
+      nav li a:active {
+        color: var(--secondary-color-2);
+      }
+      #page1 header nav ul li:nth-child(1) a,
+      #page2 header nav ul li:nth-child(2) a,
+      #page3 header nav ul li:nth-child(3) a {
+      background-color: var(--main-color-1);
+    }
+      header {
+        padding-top: 10px;
+        flex-direction: column;
+        height: fit-content;
+      }
+      #logo {
+        padding: 0 10px 0 0;
+      }      
+      #toggle-nav {
+        display: block;
+        background-color: var(--main-color-2);
+        border: none;
+        padding: 0 5px;
+        color: var(--secondary-color);
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+      }
+      nav {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+        background-color: var(--main-color-2);
+      }
+      main{
+        display: block;
+        width: 500px;
+      }
+      #content{
+        margin-left: 25px;
+        flex-direction: column;
+        align-items: center;
+      }
+      #book {
+        margin-right: 50px;
+      }
+      #text{
+        margin-top: 20px;
+      }
+      #learnmore-button {
+        margin-left: 115px;
+      }
+      #primary-nav {
+        background-color: var(--secondary-color);
+        color: var(--main-color-1);
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.5s ease-out;
+      }      
+      body.nav-open #primary-nav {
+        grid-template-rows: 1fr;
+      }
+      #primary-nav li {
+        display: block;
+      }
+      .inner {
+        overflow: hidden;
+      }
+      .review-container {
+        grid-template-columns: 1fr;
+      }
+      .float-left {float:none;}
+      .author {
+        font-size: 60px;
+        font-family: Cedarville Cursive;
+        font-weight: 400;
+        margin-left: -10px;
+    }
+    .portrait {
+        margin-left: 50px;
+    }
+    #synopsis {
+        flex-direction: column;
+    }
+    #synopsis p {
+        padding: 0;
+        padding-top: 25px;
+    }
+    #synopsis-book {
+        margin-top: 50px;
+        margin-left: -20px;
+    }
 }
